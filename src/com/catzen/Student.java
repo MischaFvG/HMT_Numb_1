@@ -1,11 +1,10 @@
 package com.catzen;
 
-import com.catzen.Person;
 
 public class Student extends Person {
-   private String university;
-   private String faculty;
-   private String group;
+    private String university;
+    private String faculty;
+    private String group;
 
     public Student() {
     }

@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main1 {
-    private static class Ball{
+    private static class Ball {
         public Ball() {
         }
     }
-    private static class Board{
-        private List<Ball> balls=new ArrayList<>();
+
+    private static class Board {
+        private List<Ball> balls = new ArrayList<>();
 
         public Board() {
             balls.add(new Ball());
@@ -17,12 +18,13 @@ public class Main1 {
             balls.add(new Ball());
         }
 
-        public int count(){
+        public int count() {
             return balls.size();
         }
     }
-    public static void main(String args[]){
-        Board board=new Board();
-        System.out.println("Quantity of objects Ball in Board list is " +board.count());
+
+    public static void main(String args[]) {
+        Board board = new Board();
+        System.out.println("Quantity of objects Ball in Board list is " + board.count());
     }
 }

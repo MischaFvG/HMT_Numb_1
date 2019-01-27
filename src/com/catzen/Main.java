@@ -30,7 +30,7 @@ public class Main {
         double arithmeticalMean;
         int array[] = new int[10];
         for (int i = 0; i < array.length; i++) {
-            array[i] = r.nextInt(10) + 10;
+            array[i] = r.nextInt(11) + 10;
         }
         for (int i = 0; i < array.length; i++) {
             countOfArray = countOfArray + 1;
@@ -45,6 +45,13 @@ public class Main {
         number = w.nextInt();
         System.out.println("Your number is " + number);
         simpleNumber(number);
+        System.out.println("Task_4");
+        System.out.println("Enter string");
+        String str5;
+        str5 = s.nextLine();
+        System.out.println("String is " + str5);
+        System.out.println("Permutations of your string are ");
+        stringPermutation("", str5);
         System.out.println("Task_5");
         System.out.println("First method");
         for (int i = 1; i <= 30; i++) {
@@ -373,5 +380,17 @@ public class Main {
         }
 
         return listMethod(house1);
+    }
+
+    public static void stringPermutation(String left, String right) {
+        if (right.length() <= 1) {
+            System.out.println(left + right);
+        } else {
+            for (int i = 0; i < right.length(); i++) {
+                char ch = right.charAt(i);
+                String resultPermutation = right.substring(0, i) + right.substring(i + 1);
+                stringPermutation(left + ch, resultPermutation);
+            }
+        }
     }
 }
